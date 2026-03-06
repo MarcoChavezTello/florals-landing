@@ -1,0 +1,61 @@
+/* =========
+   FIX FULL WIDTH (por si tu template limita #root)
+   ========= */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block !important;
+  place-items: initial !important;
+  min-height: 100%;
+}
+
+#root {
+  max-width: none !important;
+  padding: 0 !important;
+  text-align: initial !important;
+}
+
+/* =========
+   Landing base
+   ========= */
+* { box-sizing: border-box; }
+.landing-root { width: 100%; overflow-x: hidden; }
+.landing-section { scroll-margin-top: 90px; } /* para que el navbar fixed no tape el título */
+
+/* Container reutilizable */
+.landing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Animaciones */
+@keyframes landing-float {
+  from { transform: translateY(0) rotate(0deg); }
+  to   { transform: translateY(-20px) rotate(8deg); }
+}
+
+@keyframes landing-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* Navbar responsive helpers */
+@media (max-width: 768px) {
+  .landing-desktopNav { display: none !important; }
+  .landing-mobileBtn { display: block !important; }
+}
+
+@media (min-width: 769px) {
+  .landing-mobileMenu { display: none !important; }
+}
+
+/* Mejoras para pantallas grandes */
+@media (min-width: 1280px) {
+  .landing-container { max-width: 1320px; }
+}

@@ -1,0 +1,10 @@
+# ══════════════════════════════════════
+# robots.txt — Detalles con Amor
+# Indica a los bots qué pueden indexar
+# ══════════════════════════════════════
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://florals-details.vercel.app/sitemap.xml
